@@ -14,13 +14,8 @@ out/
 build/
 dist/
 
-# Env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
+# Env files (Allowed for this example project)
+# .env 제거됨
 
 # Logs
 npm-debug.log*
