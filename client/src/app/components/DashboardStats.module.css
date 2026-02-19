@@ -1,0 +1,107 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: var(--primary);
+}
+
+/* Specific colors for different stats if needed, or just use primary */
+.card:nth-child(1)::before { background-color: #3b82f6; } /* Blue */
+.card:nth-child(2)::before { background-color: #10b981; } /* Green */
+.card:nth-child(3)::before { background-color: #f59e0b; } /* Amber (Waiting) */
+.card:nth-child(4)::before { background-color: #2563eb; } /* Blue (Revenue) */
+.card:nth-child(5)::before { background-color: #a855f7; } /* Purple (MRR) */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+/* Card 1 - Blue theme */
+.card:nth-child(1) .icon {
+  background-color: #dbeafe;
+  color: #3b82f6;
+}
+
+/* Card 2 - Green theme */
+.card:nth-child(2) .icon {
+  background-color: #d1fae5;
+  color: #10b981;
+}
+
+/* Card 3 - Amber theme (Waiting) */
+.card:nth-child(3) .icon {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Card 4 - Blue theme (Revenue) */
+.card:nth-child(4) .icon {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+/* Card 5 - Purple theme (MRR) */
+.card:nth-child(5) .icon {
+  background-color: #f3e8ff;
+  color: #a855f7;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  letter-spacing: -0.025em;
+}
+
+.trend {
+  font-size: 0.8rem;
+  color: #10b981;
+  margin-top: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

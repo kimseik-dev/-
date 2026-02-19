@@ -1,0 +1,76 @@
+.sidebar {
+  width: 260px;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.newProjectBtn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--foreground);
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 24px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.newProjectBtn:hover {
+  background-color: #f3f4f6;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4b5563;
+  margin-bottom: 4px;
+  transition: background-color 0.2s;
+}
+
+.navItem:hover {
+  background-color: #f3f4f6;
+  color: var(--primary);
+}
+
+.active {
+  background-color: #f3e8ff;
+  color: var(--primary);
+}
+
+.bottomArea {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}

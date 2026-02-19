@@ -1,0 +1,154 @@
+.tableContainer {
+  background: white;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead {
+  background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 100%);
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.th {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Column width proportions for Plan Table */
+.th:nth-child(1) { width: 25%; } /* 플랜명 */
+.th:nth-child(2) { width: 15%; } /* 월 가격 */
+.th:nth-child(3) { width: 15%; } /* 결제 주기 */
+.th:nth-child(4) { width: 15%; } /* 상태 */
+.th:nth-child(5) { width: 30%; } /* 동작 */
+
+.tr {
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+}
+
+.tr:hover {
+  background-color: #fafbfc;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.td {
+  padding: 24px;
+  font-size: 0.9rem;
+  color: #1f2937;
+  vertical-align: middle;
+}
+
+.planName {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #a855f7;
+  font-size: 1.05rem;
+}
+
+.statusActive {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 1px 2px 0 rgba(16, 185, 129, 0.1);
+}
+
+.statusInactive {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #991b1b;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 1px 2px 0 rgba(220, 38, 38, 0.1);
+}
+
+.actionMenuButton {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: white;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  color: #6b7280;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionMenuButton:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+.dropdown {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 4px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  min-width: 140px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 10px 16px;
+  background: white;
+  border: none;
+  text-align: left;
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: block;
+}
+
+.dropdownItem:hover {
+  background: #f3f4f6;
+  color: #6366f1;
+}
+
+.dropdownItemRed {
+  color: #ef4444;
+}
+
+.dropdownItemRed:hover {
+  background: #fee2e2;
+  color: #b91c1c;
+}
